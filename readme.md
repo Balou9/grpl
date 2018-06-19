@@ -23,6 +23,7 @@ var grpl = require('grpl')
 var arr = ['Mikey', 'Allday', 'Mikey', 'Everyday', 'Allday']
 
 console.log(grpl(arr, 'Allday', 'index'))
+console.log(grpl(arr, 'Allday', 'bool'))
 ```
 
 ***
