@@ -1,13 +1,16 @@
 var grpl = require('./index.js')
-var arr = ['Mikey', 'Allday', 'Mikey', 'Everyday', '419', 'Allday', '419']
+var names = ['Mikey', 'Allday', 'Mikey', 'Everyday', '419', 'Allday', '419']
 
 
-console.log({logicGrep: grpl(arr, 'Allday', 'bool'),
-            indexicalGrep: grpl(arr, 'Allday', 'index'),
-            falseGrep: grpl(arr, 'Allday', 'nono')})
+function testGrpl (arr) {
+  return {
+    'defaultOpts': grpl(arr, 'Mikey'),
+    'specifiyingIndexOpts': grpl(arr, 'Mikey', 'index'),
+    'emptyOpts': grpl(arr, 'Mikey', ''),
+    'falseOpts': grpl(arr, 'Mikey', 'dsadda'),
+    'boolOpts': grpl(arr, 'Mikey', 'bool'),
+    'numberPatternError': grpl(arr, 332)
+  }
+}
 
-console.log({logicGrep: grpl(arr, 'Mikey', 'bool'),
-            indexicalGrep: grpl(arr, 'Mikey', 'index'),
-            falseGrep: grpl(arr, 'Mikey', 'nono')})
-
-console.log(grpl(arr, 'isdj', 'index'))
+console.log(testGrpl(names))
