@@ -4,7 +4,7 @@ var arr = ['Mikey', 'Allday', 'Mikey', 'Everyday', '419', 'Allday', '419']
 
 console.log({logicGrep: grpl(arr, 'Allday', 'bool'),
             indexicalGrep: grpl(arr, 'Allday', 'index'),
-            falseGrep: grpl(arr, '419', 'nono')})
+            falseGrep: grpl(arr, 'Allday', 'nono')})
 
 console.log({logicGrep: grpl(arr, 'Mikey', 'bool'),
             indexicalGrep: grpl(arr, 'Mikey', 'index'),

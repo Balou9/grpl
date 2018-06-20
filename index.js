@@ -1,12 +1,5 @@
 function grpl (arr, pattern, opts) {
 
-  if (opts === 'index') {
-    var result = []
-    for (var i = 0; i < arr.length; i++){
-      if (pattern === arr[i]) result.push(i)
-    }
-    return result
-  }
 
   if (opts === 'bool') {
     return arr.map(function (each) {
@@ -15,7 +8,16 @@ function grpl (arr, pattern, opts) {
     })
   }
 
-  else return 'Third argument should be index or bool'
+  else {
+      var result = []
+      for (var i = 0; i < arr.length; i++){
+        if (pattern === arr[i]) result.push(i)
+      }
+      return result
+  }
+
+
+//  else return 'Third argument should be index or bool'
 
 }
 
